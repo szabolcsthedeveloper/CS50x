@@ -19,3 +19,5 @@ It has the following courses:
 - Final Project
 
 More information [here](https://cs50.harvard.edu/x/2023/).
+
+[![CS50 Certification](https://i.imgur.com/Wg8BlQw.png)](https://certificates.cs50.io/b146f0bf-82d9-46bb-9c93-61b28534704d.pdf?size=letter)

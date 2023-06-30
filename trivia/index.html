@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+        <script>
+            // TODO: Add code to check answers to questions
+        </script>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <!-- TODO: Add multiple choice question here -->
+                <h3>What is the approximate ratio of people to sheep in New Zealand?</h3>
+                    <button class="answer" data-correct="false">6 people per 1 sheep</button>
+                    <button class="answer" data-correct="false">3 people per 1 sheep</button>
+                    <button class="answer" data-correct="true">1 person per 1 sheep</button>
+                    <button class="answer" data-correct="false">1 person per 3 sheep</button>
+                    <button class="answer" data-correct="false">1 person per 6 sheep</button>
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <!-- TODO: Add free response question here -->
+                <h3>In which country is it illegal to own only one guinea pig, as a lone guinea pig might get lonely?</h3>
+                <input type="text" id="answer-input">
+                <button id="confirom-btn">Check Answer</button>
+            </div>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>

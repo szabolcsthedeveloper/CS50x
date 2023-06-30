@@ -1,0 +1,47 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Portfolio
+{% endblock %}
+
+{% block main %}
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th class="text-end">Symbol</th>
+                <th class="text-end">Name</th>
+                <th class="text-end">Shares</th>
+                <th class="text-end">Price</th>
+                <th class="text-end">TOTAL</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for stock in stocks %}
+                <tr>
+                    <td class="text-end">{{ stock.symbol }}</td>
+                    <td class="text-end">{{ stock.name }}</td>
+                    <td class="text-end">{{ stock.amount }}</td>
+                    <td class="text-end">{{ stock.price | usd }}</td>
+                    <td class="text-end">{{ stock.total | usd }}</td>
+                    <td>
+                        <form method="get">
+                            <input name="sym" type="hidden" value="{{ stock.symbol }}">
+                            <button class="btn btn-primary" type="submit" formaction="/buy">Buy</button>
+                            <button class="btn btn-primary" type="submit" formaction="/sell">Sell</button>
+                        </form>
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+        <tfoot>
+            <tr>
+                <td class="border-0 fw-bold text-end" colspan="5">Cash</td>
+                <td class="border-0">{{ user.cash | usd}}</td>
+            </tr>
+            <tr>
+                <td class="border-0 fw-bold text-end" colspan="5">Total</td>
+                <td class="border-0">{{ user.total | usd }}</td>
+            </tr>
+        </tfoot>
+    </table>
+{% endblock %}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cookie Clicker Clone</title>
+  <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+  <div id="background">
+    <div id="cookie-container">
+      <img id="cookie" src="cookie.png" onclick="cookieClick()">
+    </div>
+  </div>
+  <div class="container">
+    <h1>Cookie Clicker Clone</h1>
+    <p>Click the cookie to earn points!</p>
+    <p id="score">Score: 0</p>
+  </div>
+  <h2>Upgrades</h2>
+
+  <div class="upgrade">
+    <h3>Click Upgrade</h3>
+    <p>Cost: <span id="click-upgrade-cost">10</span> points</p>
+    <button onclick="purchaseClickUpgrade()">Purchase</button>
+  </div>
+
+  <div class="upgrade">
+    <h3>Idle Upgrade</h3>
+    <p>Cost: <span id="idle-upgrade-cost">20</span> points</p>
+    <button onclick="purchaseIdleUpgrade()">Purchase</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
